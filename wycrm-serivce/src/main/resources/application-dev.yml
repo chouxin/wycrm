@@ -1,0 +1,17 @@
+server:
+  port: 8090
+
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/wycrm?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC&autoReconnect=true&useSSL=false
+    username: qiuxin
+    password: qiuxin
+    driver-class-name: com.mysql.jdbc.Driver
+    dbcp2:
+      test-while-idle: true
+      time-between-eviction-runs-millis: 300000
+      min-evictable-idle-time-millis: 1800000
+      test-on-borrow: false
+      validation-query: select 1 from dual
+
+

@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: wycrm-service
+  profiles:
+    active: dev
+  thymeleaf:
+    cache: false
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: redis123456
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://116.62.203.82:8095/eureka/
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+
+#pagehelper分页插件配置
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
